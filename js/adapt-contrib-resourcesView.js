@@ -51,8 +51,12 @@ define([
             var data = $(event.currentTarget).data();
 
             if (!data.forceDownload) {
+              if(data.popup) {
+                window.open(data.href, '', 'resizable=yes,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=yes,dependent=no,width='+data.width+',left=0,height='+data.height+',top=0');
+              } else {
                 window.top.open(data.href);
-                return;
+              }
+              return;
             }
 
             var dummyLink = document.createElement('a');
