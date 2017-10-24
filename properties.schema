@@ -163,7 +163,6 @@
                         "title": "Force download",
                         "inputType": "Checkbox",
                         "validators": [],
-                        "translatable": true,
                         "help": "Controls whether the Resource is opened in a new window or downloaded."
                       },
                       "title": {
@@ -196,6 +195,32 @@
                         "title": "Link",
                         "inputType": "Asset:other",
                         "validators": ["required"]
+                      },
+                      "_openInPopup": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "Open in popup window",
+                        "inputType": "Checkbox",
+                        "validators": [],
+                        "help": "Controls whether the Resource is opened in a popup window."
+                      },
+                      "_width": {
+                        "type": "number",
+                        "required": false,
+                        "title": "Popup window width",
+                        "inputType": "Number",
+                        "default": 0,
+                        "help": "The height of the popup window.",
+                        "validators": ["number"]
+                      },
+                      "_height": {
+                        "type": "number",
+                        "required": false,
+                        "title": "Popup window height",
+                        "inputType": "Number",
+                        "default": 0,
+                        "help": "The width of the popup window.",
+                        "validators": ["number"]
                       }
                     }
                   }
